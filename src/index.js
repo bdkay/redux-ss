@@ -1,3 +1,7 @@
+// Create a new component that produces some html
+
+// Take this component's generated HTML and put it on the page (in the DOM)
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
