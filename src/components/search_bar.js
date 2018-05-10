@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 // Component for searching videos
-const SearchBar = () => {
-  return <input />; // React.createElement
-};
+
+// Class-based component
+class SearchBar extends Component {
+  render () {
+    return <input />;
+  }
+}
+
+// Functional component
+
+// const SearchBar = () => {
+//   return <input />;
+// }
 
 export default SearchBar;
