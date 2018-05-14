@@ -5,8 +5,9 @@ import React, { Component } from 'react';
 // Class-based component
 class SearchBar extends Component {
   render () {
-    return <input />;
+    return <input onChange={(event => console.log(event.target.value))} />;
   }
+
 }
 
 // Functional component
