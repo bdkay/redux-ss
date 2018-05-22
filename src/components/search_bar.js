@@ -8,17 +8,20 @@ class SearchBar extends Component {
     // Initializing state in a class-based component
     super(props);
 
-    this.state = { term: '' };
+    this.state = { term: 'Starting value' };
   }
 
   render () {
  // return <input onChange={(event) => console.log(event.target.value))} />;
  // Single line arrow functions can drop leading parens
-    // When changing state, always use this.setState. this.state = is only used in the constructor
+
     return (
       <div>
-        <input onChange={event => this.setState({ term: event.target.value })} />
-        Value of the input: { this.state.term }
+        <input
+        // Controlled component which has its value set by state. Its value only ever changes when the state changes
+        value={ this.state.term }
+        // When changing state, always use this.setState. this.state = is only used in the constructor
+        onChange={event => this.setState({ term: event.target.value })} />
       </div>
     );
   }
