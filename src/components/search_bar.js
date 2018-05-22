@@ -14,7 +14,13 @@ class SearchBar extends Component {
   render () {
  // return <input onChange={(event) => console.log(event.target.value))} />;
  // Single line arrow functions can drop leading parens
-    return <input onChange={(event => console.log(event.target.value))} />;
+    // When changing state, always use this.setState. this.state = is only used in the constructor
+    return (
+      <div>
+        <input onChange={event => this.setState({ term: event.target.value })} />
+        Value of the input: { this.state.term }
+      </div>
+    );
   }
 
 }
