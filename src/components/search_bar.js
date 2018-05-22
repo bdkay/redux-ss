@@ -8,7 +8,7 @@ class SearchBar extends Component {
     // Initializing state in a class-based component
     super(props);
 
-    this.state = { term: 'Starting value' };
+    this.state = { term: '' };
   }
 
   render () {
