@@ -4,7 +4,6 @@ const VideoListItem = ({video}) => {
 //^^ is same as: const video = props.video;
 
   const imageUrl = video.snippet.thumbnails.default.url;
-  const videoTitle = video.snippet.title;
 
   return (
     <li className="list-group-item">
@@ -15,7 +14,7 @@ const VideoListItem = ({video}) => {
         </div>
 
         <div className="media-body">
-          <div className="media-heading">{videoTitle}</div>
+          <div className="media-heading"></div>
         </div>
 
       </div>

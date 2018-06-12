@@ -4,6 +4,7 @@ import YTSearch from 'youtube-api-search';
 
 import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
+import VideoDetail from './components/video_detail';
 
 const API_KEY = 'AIzaSyDCgD1fx18NbRaSGFHnVJy63ryMhezFO34';
 
@@ -19,7 +20,7 @@ class App extends Component {
 
     YTSearch({ key: API_KEY, term: 'surfboards' }, (videos) => {
       //Callback function to update list with videos returned
-
+      console.log(videos);
       //In ES6, if key and value are the same, you can delete one
       this.setState({ videos });
       //this.setState({ videos: videos })
@@ -29,6 +30,7 @@ class App extends Component {
     return (
       <div>
         <SearchBar />
+        <VideoDetail video={this.state.videos[0]} />
         <VideoList videos={this.state.videos} />
       </div>
     );
