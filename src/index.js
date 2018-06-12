@@ -16,13 +16,20 @@ class App extends Component {
     super(props);
 
     //Array of videos
-    this.state = { videos: [] };
+    this.state = {
+      videos: [],
+      selectedVideo: null
+    };
+
 
     YTSearch({ key: API_KEY, term: 'surfboards' }, (videos) => {
       //Callback function to update list with videos returned
       console.log(videos);
       //In ES6, if key and value are the same, you can delete one
-      this.setState({ videos });
+      this.setState({
+        videos: videos,
+        selectedVideo: videos[0]
+       });
       //this.setState({ videos: videos })
     });
   }
@@ -30,7 +37,7 @@ class App extends Component {
     return (
       <div>
         <SearchBar />
-        <VideoDetail video={this.state.videos[0]} />
+        <VideoDetail video={this.state.selectedVideo} />
         <VideoList videos={this.state.videos} />
       </div>
     );
