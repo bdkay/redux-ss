@@ -1,7 +1,7 @@
 import React from 'react';
 
 const VideoDetail = ({video}) => {
-  //^^ is same as: const video = props.video;
+  //^^^ is same as: const video = props.video;
 
   const videoId = video.id.videoId;
 
