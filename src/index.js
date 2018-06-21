@@ -25,7 +25,7 @@ class App extends Component {
     YTSearch({ key: API_KEY, term: 'surfboards' }, (videos) => {
       //^^ () => Callback function to update list with videos returned
 
-      //In ES6, if key and value are the same, you can delete one
+      //In ES6, if key and value are the same, you can declare them at the same time
       this.setState({
         videos: videos,
         selectedVideo: videos[0]
@@ -33,7 +33,7 @@ class App extends Component {
       //this.setState({ videos: videos })
     });
   }
-  
+
   render(){
     return (
       <div>

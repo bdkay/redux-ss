@@ -4,6 +4,8 @@ const VideoListItem = ({video, onVideoSelect}) => {
 //^^ is same as: const video = props.video
 //^^ is same as: const onVideoSelect = props.onVideoSelect
 
+//Since these are props, you can pick them off as they're passed in instead of passing in (props) and then performing that action
+
   const imageUrl = video.snippet.thumbnails.default.url;
 
   return (
