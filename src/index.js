@@ -10,6 +10,7 @@ const API_KEY = 'AIzaSyDCgD1fx18NbRaSGFHnVJy63ryMhezFO34';
 
 // Create a new component that produces some html
 // const App = function(){}
+
 class App extends Component {
   //Runs immediately, kicks off search
   constructor(props){
@@ -39,7 +40,7 @@ class App extends Component {
         <SearchBar />
         <VideoDetail video={this.state.selectedVideo} />
         <VideoList
-          onVideoSelect={selectedVideo => this.setState({selectedVideo})} 
+          onVideoSelect={selectedVideo => this.setState({selectedVideo})}
           videos={this.state.videos}
           />
       </div>
