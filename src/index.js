@@ -22,7 +22,6 @@ class App extends Component {
       selectedVideo: null
     };
 
-
     YTSearch({ key: API_KEY, term: 'surfboards' }, (videos) => {
       //^^ () => Callback function to update list with videos returned
 
@@ -34,6 +33,7 @@ class App extends Component {
       //this.setState({ videos: videos })
     });
   }
+  
   render(){
     return (
       <div>
