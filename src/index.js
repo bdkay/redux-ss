@@ -19,10 +19,14 @@ class App extends Component {
     //Array of videos
     this.state = {
       videos: [],
-      selectedVideo: null
+      selectedVideo: null,
     };
 
-    YTSearch({ key: API_KEY, term: 'surfboards' }, (videos) => {
+    this.videoSearch('surfboards');
+  }
+
+  videoSearch(term) {
+    YTSearch({ key: API_KEY, term: term }, (videos) => {
       //^^ () => Callback function to update list with videos returned
 
       //In ES6, if key and value are the same, you can declare them at the same time
@@ -37,7 +41,8 @@ class App extends Component {
   render(){
     return (
       <div>
-        <SearchBar />
+        <SearchBar
+          onSearchTermChange={term => this.videoSearch(term)} />
         <VideoDetail video={this.state.selectedVideo} />
         <VideoList
           onVideoSelect={selectedVideo => this.setState({selectedVideo})}
