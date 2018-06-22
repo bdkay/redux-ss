@@ -5,7 +5,7 @@ const VideoDetail = ({video}) => {
 
   //Check to see if video has been passed in props before you attempt to render
   if (!video) {
-    return <div>Loading...</div>;
+    return <div>Loading...</div>
   }
 
   const videoId = video.id.videoId;
