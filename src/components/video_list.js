@@ -17,7 +17,6 @@ const VideoList = (props) => {
 
   return (
     <ul className="col-md-4 list-group">
-      //This is the array of components we got from the above algo
       {videoItems}
     </ul>
   );

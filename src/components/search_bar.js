@@ -16,7 +16,7 @@ class SearchBar extends Component {
  // Single line arrow functions can drop leading parens
 
     return (
-      <div>
+      <div className="search-bar">
         <input onChange={event => this.setState({ term: event.target.value })} />
       </div>
     );
